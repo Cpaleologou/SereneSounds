@@ -1,0 +1,381 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --dark-blue: #375F78;
+    --light-blue: #5E93B2;
+    --light-cream: #F6F2EF;
+    --bright-orange: #EEA25C;
+}
+
+@font-face {
+    font-family: 'FranieTest-Hair';
+    src: url(Assets/fonts/FranieVariableTest-Hair-BF64c31f3db8c2b.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FranieTest-SemiLight';
+    src: url(Assets/fonts/FranieVariableTest-Light-BF64c31f3dc06e0.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PlayfairDisplay';
+    src: url(Assets/fonts/PlayfairDisplay-BoldItalic.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* LANDING PAGE */
+
+.landingPage {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: url(Assets/backgroundComponents/BackgroundGradients/Landing.svg) no-repeat bottom center;
+    background-size: cover;
+}
+
+/* Navbar */
+.header{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    font-family: 'FranieTest-SemiLight';
+    font-size: 17px;
+    text-transform: uppercase;
+    color: var(--dark-blue);
+    margin-top: 10px;
+}
+
+.navbar ul li {
+    margin: 5px;
+    cursor: pointer;
+}
+
+.navbar ul li:hover {
+    transform: scale(0.90);
+}
+
+.socials{
+    display: flex;
+    list-style: none;
+    margin-top: 10px;
+}
+
+.socials li {
+    margin: 7px;
+}
+
+.socials li img{
+    width: 17px;
+    cursor: pointer;
+}
+
+/* Title */
+
+.title {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 15vh;
+}
+
+.title h1 {
+    font-family: 'FranieTest-Hair';
+    text-transform: uppercase;
+    font-size: 11vh;
+    width: 100%;
+    text-align: center;
+    color: var(--dark-blue);
+}
+
+.title h2 {
+    font-family: 'PlayfairDisplay';
+    text-transform: uppercase;
+    font-size: 4vh;    
+    width: 100%;
+    text-align: center;
+    color: var(--bright-orange);
+}
+
+/* ARTISTS INFO */
+
+.artistsInfo {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background: url(Assets/backgroundComponents/BackgroundGradients/Info.svg) no-repeat top center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 25vh;
+    align-items: center;
+    font-family: 'FranieTest-SemiLight';
+    color: white;
+    text-transform: uppercase;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info .dates{
+    display: flex;
+    list-style: none;
+    font-size: clamp(15px,4vw,30px);
+    margin-top: 15px;
+}
+
+.info .dates li{
+    margin: 10px
+}
+
+.artists {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.artists > ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.artists li {
+    margin: 10px;
+    
+}
+
+.artists .headliners1 {
+    font-size: clamp(15px,4vw,40px);
+}
+
+.artists .headliners2 {
+    font-size: clamp(12px,3vw,35px);
+}
+.artists .lineUp {
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: clamp(10px,1.5vw,30px);
+}
+
+/* SPONSORS & IMAGES */
+.images {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(Assets/backgroundComponents/BackgroundGradients/Images.svg) no-repeat top center;
+    background-size: cover;
+}
+
+.imagesInfo h1{
+    color: white;
+    font-family: 'FranieTest-SemiLight';
+    text-align: center;
+    padding-top: 50px;
+}
+
+.logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px;
+}
+
+.logos img{
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.grid {
+    background: #fff;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 5px;
+}
+
+.imgContainer img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.imgContainer > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgContainer > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.imgContainer {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    max-height: 500px;
+    padding: 10px;
+}
+
+.yoga{
+    grid-column: span 2;
+}
+.howe{
+    grid-column: span 3;
+}
+.directions{
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.ampitheatre{
+    grid-column: span 3;
+}
+.stage{
+    grid-column: span 2;
+}
+
+/* TICKETS & PRICING */
+
+.pricing {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: url(Assets/backgroundComponents/BackgroundGradients/Images2.svg) no-repeat top center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-transform: uppercase;
+    padding-bottom: 100px;
+}
+
+.pricing > h1{
+    margin-top: 100px;
+    margin-bottom: 30px;
+    color: #fff;
+    font-family: 'FranieTest-SemiLight';
+}
+
+.ticketContainer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.pricing > div > div {
+    background: #fff;
+    margin: 20px;
+    width: 30vw;
+    min-width: 300px;
+    max-width: 400px;
+    border-radius: 10px;
+    font-family: 'FranieTest-SemiLight';
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.pricing h2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+.pricing p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.buyNowBlue{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: var(--light-blue);
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: 'FranieTest-SemiLight'; 
+    cursor: pointer;
+}
+
+.buyNowBlue:hover{
+    transform: scale(0.95);
+}
+
+.buyNowOrange{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: var(--bright-orange);
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: 'FranieTest-SemiLight';
+    cursor: pointer;
+}
+
+.buyNowOrange:hover{
+    transform: scale(0.95);
+}
+
+.ticketHeader {
+    background: var(--light-blue);
+    width: 100%;
+    color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    font-family: 'FranieTest-SemiLight';
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.ticketHeaderOrange {
+    background: var(--bright-orange);
+    width: 100%;
+    color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    font-family: 'FranieTest-SemiLight';
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
