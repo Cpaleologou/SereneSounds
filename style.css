@@ -379,3 +379,97 @@
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
+/* MOBILE */
+
+@media only screen and (max-width: 600px) {
+    .navbar ul li{
+        display: none;
+    }
+
+    .socials{
+        display: none;
+    }
+
+    .title h1 {
+        font-size: 6vh;
+    }
+    .title h2 {
+        font-size: 3vh;
+    }
+
+    .artists .headliners1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+    }
+    
+    .artists .headliners2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 15px;
+        font-size: 20px;
+    }
+    .artists .lineUp {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 15px;
+        font-size: 15px;
+    }
+
+    .artistsInfo {
+        height: 100%;
+        padding-bottom: 30px;
+    }
+
+    .images {
+        height: 2300px;
+        padding-bottom: 30px;
+    }
+
+    .logos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 40px;
+    }
+
+    .grid {
+        background: #fff;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 5px;
+        height: 2025px;
+    }
+    
+    .imgContainer img {
+        max-width: 100%;
+        vertical-align: middle;
+        display: inline-block;
+    }
+    
+    .imgContainer > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .imgContainer > div > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+    
+    .imgContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
